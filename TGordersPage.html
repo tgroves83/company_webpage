@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!--
+    author: Tiffany Groves
+    page: ordersPage
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="TGstyleSheet.css"> 
+    
+    <script> 
+
+        function verifyDigit(e)
+        {
+            console.log(`${e.type}: key = ${e.key}, which = ${e.which}, charCode = ${e.charCode}, keyCode = ${e.keyCode}`);
+     
+            if (e.key >= 0 && e.key <= 9) 
+            {
+                return true;
+            }
+            return false;	
+        }
+          
+        </script>
+
+</head>
+
+<body>
+    <main>
+        <article class="container">
+            <h4>&nbsp;</h4>
+			<h4>&nbsp;</h4>
+			<h4>&nbsp;</h4>
+
+            <section><h4>&nbsp;</h4></section>
+		    <section><h3>ITEM</h3></section>
+			<section><h3>QUANTITY</h3></section>
+
+            <section><h6>Coffee</h6></section>
+            <section><h4>&nbsp;</h4><select class="selectors" size="1">
+                <option>&nbsp;</option>
+                <option>Single Bag Milled</option>
+                <option>Single Bag Grain</option>
+                <option>3-Pack Milled</option>
+                <option>3-Pack Grain</option></select></section>
+            <section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3"  value="0" type="text"></section>
+
+            <section><h6>Gear</h6></section>
+			<section><h4>&nbsp;</h4><select class="selectors" size="1">
+                <option>&nbsp;</option>
+                <option>Aeropress</option>
+                <option>Kettle</option>
+                <option>French Press</option>
+                <option>Pour Over</option></select></section>
+			<section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3" value="0" type="text"></section>
+
+			<section><h6>Supplies</h6></section>
+			<section><h4>&nbsp;</h4><select class="selectors" size="1">
+                <option>&nbsp;</option>
+                <option>Aeropress Filters</option>
+                <option>Aeropress Fellow Attachment</option>
+                <option>Cone Filters</option></select></section>
+			<section><h4>&nbsp;</h4><input class="number" minlength="1" maxlength="3" value="0" type="text"></section>
+
+			<section><h4>&nbsp;</h4></section>
+			<section><h4>&nbsp;</h4><button id="order" onclick="alert('Thank you for ordering from \nDarkened Dreams Coffee!')"  
+                >order now</button></section>
+			<section><h4>&nbsp;</h4><button id="cancel" 
+                onclick="alert('Sorry that you could not complete\n your purchase. For further assistance\n please contact us.')"  
+                >cancel</button></section>
+
+        </article>
+    </main>
+
+    <script>
+		document.getElementById("number").onkeypress = () => {return verifyDigit(event);}
+	</script>
+</body>
+
